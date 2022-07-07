@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<header class="main-header">
+			<header class="main-header clearfix">
 				<h1>📘 The Code Magazine</h1>
 				<!-- Only one h1 element per page -->
 				<nav>
@@ -19,6 +19,7 @@
 					<a href="#">Flexbox</a>
 					<a href="#">CSS Grid</a>
 				</nav>
+				<!-- <div class="clearfix"></div> -->
 			</header>
 			<!-- href pointing # symbol means going nowhere but the top of the page 
     without href attribute a tag is just a regular tag -->
@@ -32,8 +33,9 @@
 						alt="Headshot of Laura Jones"
 						width="50"
 						height="50"
+						class="author-img"
 					/>
-					<p id="author">
+					<p id="author" class="author">
 						Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
 					</p>
 					<img

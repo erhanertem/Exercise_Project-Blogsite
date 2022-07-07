@@ -24,7 +24,7 @@ li {
 } */
 
 .container {
-	width: 1000px;
+	width: 1200px;
 	/* margin-left: auto;
 	margin-right: auto; */
 	margin: 0 auto;
@@ -112,6 +112,7 @@ li:last-child {
 
 .no-bullets {
 	list-style: none;
+	margin-left: 0;
 }
 
 .main-header {
@@ -148,15 +149,8 @@ aside {
 	background-color: #f7f7f7;
 	border-top: 5px solid #1098ad;
 	border-bottom: 5px solid #1098ad;
-	/* padding-top: 50px;
-	padding-bottom: 50px; */
-	padding: 50px 0;
-	width: 500px; /* giving dimensions to the element */
+	padding: 50px 40px;
 }
-
-/* body {
-	background-color: orangered;
-} */
 
 li:first-child {
 	font-weight: bold;
@@ -267,3 +261,44 @@ h2::after {
 	right: -25px;
 }
 /* We have set parent element h2 as position:relative in order to set this pseudo element content "TOP" positioned absolute in relation to */
+
+/* EXPERIMENTING WITH FLOATS */
+.author-img {
+	float: left;
+	margin-bottom: 20px;
+}
+.author {
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+h1 {
+	float: left;
+}
+nav {
+	float: right;
+}
+/* .clearfix {
+	clear: both;
+	content: "";
+	display: block;
+} */
+.main-header {
+	display: flow-root;
+}
+/* 2022 way of clearfix hack for float collapses */
+
+article {
+	width: 825px;
+	float: left;
+}
+
+aside {
+	width: 300px;
+	float: right;
+}
+
+footer {
+	clear: both;
+}
