@@ -24,7 +24,7 @@ li {
 } */
 
 .container {
-	width: 700px;
+	width: 1000px;
 	/* margin-left: auto;
 	margin-right: auto; */
 	margin: 0 auto;
@@ -47,6 +47,7 @@ h1 {
 h2 {
 	font-size: 40px;
 	margin-bottom: 30px;
+	position: relative;
 }
 
 h3 {
@@ -238,7 +239,31 @@ button {
 	cursor: pointer;
 
 	position: absolute;
-	/* position:relative aasigned to body when we set position:absolute here so we position according to relative position assigned element*/
+	/* position:relative aasigned to body which is the parent element that we want to set this button in relation to */
 	bottom: 50px;
 	right: 50px;
 }
+
+h1::first-letter {
+	font-style: normal;
+	margin-right: 5px;
+}
+/* p::first-line {
+	color: red;
+} */
+/* h3 + p::first-line {
+	color: red;
+} */
+h2::after {
+	content: "TOP";
+	background-color: #ffe70e;
+	color: #444;
+	font-size: 16px;
+	font-weight: bold;
+	/* display: inline-block; */
+	padding: 5px 10px;
+	position: absolute;
+	top: -15px;
+	right: -25px;
+}
+/* We have set parent element h2 as position:relative in order to set this pseudo element content "TOP" positioned absolute in relation to */
