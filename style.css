@@ -3,6 +3,7 @@
 	font-family: sans-serif; */
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 /* Universal selector ignores inheritance and applies styles to all elements - A global reset */
 body {
@@ -12,16 +13,6 @@ body {
 	border-top: 10px solid #1098ad;
 	position: relative;
 }
-/* Assign page defaults */
-/* h1,
-h2,
-h3,
-h4,
-p,
-li {
-	font-family: sans-serif;
-	color: #444;
-} */
 
 .container {
 	width: 1200px;
@@ -71,7 +62,6 @@ p {
 li {
 	font-size: 20px;
 	margin-bottom: 10px;
-	/* display: inline; */
 }
 /* element selector */
 
@@ -117,19 +107,13 @@ li:last-child {
 
 .main-header {
 	background-color: #f7f7f7;
-	/* padding: 20px; */
-	/* padding-left: 40px; */
 	padding: 20px 40px;
 	margin-bottom: 60px;
-	/* height: 80px; */
 }
 nav {
 	font-size: 18px;
 }
 nav a:link {
-	/* background-color: orangered;
-	margin: 20px;
-	display: block; */
 	margin-right: 30px;
 	margin-top: 10px;
 	display: inline-block;
