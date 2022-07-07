@@ -109,6 +109,7 @@ li:last-child {
 	/* padding-left: 40px; */
 	padding: 20px 40px;
 	margin-bottom: 60px;
+	height: 80px;
 }
 nav {
 	font-size: 18px;
@@ -126,6 +127,7 @@ aside {
 	/* padding-top: 50px;
 	padding-bottom: 50px; */
 	padding: 50px 0;
+	width: 500px; /* giving dimensions to the element */
 }
 
 /* body {
@@ -181,22 +183,29 @@ a:active {
 }
 
 /* Resolving conflicts & specificity exercise */
-#copyright {
+/* #copyright {
 	color: red;
-}
+} */
 /* Has the highest specificity and overrides all */
-.copyright {
+/* .copyright {
 	color: blue;
 }
 .text {
 	color: yellow;
-}
+} */
 /* .text overrides .copyright as it comes right after it in the absence of #copyright */
-footer p {
+/* footer p {
 	color: green;
-}
+} */
 /* Has the lowest specificity */
-footer p {
+/* footer p {
 	color: green !important;
-}
+} */
 /* !important is an override mechanism that disregards specificity - its a last resort of measure and shall be disregarded whenever possible */
+.post-image {
+	/* width: 800px; */
+	width: 100%;
+	/* extends to the size of the full browser view width */
+	height: auto;
+	/* keeps aspect ratio if H/W is mentioned in HTML as well as an overrite measure*/
+}
