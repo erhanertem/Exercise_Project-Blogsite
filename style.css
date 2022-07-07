@@ -1,4 +1,18 @@
-h1,
+* {
+	/* color: #444;
+	font-family: sans-serif; */
+	margin: 0;
+	padding: 0;
+}
+/* Universal selector ignores inheritance and applies styles to all elements - A global reset */
+body {
+	color: #444;
+	font-family: sans-serif;
+
+	border-top: 10px solid #1098ad;
+}
+/* Assign page defaults */
+/* h1,
 h2,
 h3,
 h4,
@@ -6,14 +20,14 @@ p,
 li {
 	font-family: sans-serif;
 	color: #444;
-}
-/* * {} selects all as well */
+} */
 
 h1,
 h2,
 h3 {
 	color: #1098ad;
 }
+/* Overrides the previous declarations for these HTML elements */
 
 h1 {
 	font-size: 26px;
@@ -23,10 +37,13 @@ h1 {
 
 h2 {
 	font-size: 40px;
+	margin-bottom: 30px;
 }
 
 h3 {
 	font-size: 30px;
+	margin-top: 40px;
+	margin-bottom: 20px;
 }
 
 h4 {
@@ -38,13 +55,24 @@ h4 {
 p {
 	font-size: 22px;
 	line-height: 1.5;
+	margin-bottom: 15px;
 }
 
 li {
 	font-size: 20px;
+	margin-bottom: 10px;
 }
 /* element selector */
 
+ul,
+ol {
+	margin-left: 50px;
+	margin-bottom: 20px;
+}
+
+li:last-child {
+	margin-bottom: 0px;
+}
 /* footer p {
 	font-size: 16px;
 } */
@@ -77,12 +105,27 @@ li {
 
 .main-header {
 	background-color: #f7f7f7;
+	/* padding: 20px; */
+	/* padding-left: 40px; */
+	padding: 20px 40px;
+	margin-bottom: 60px;
 }
-
+nav {
+	font-size: 18px;
+}
+.post-header {
+	margin-bottom: 40px;
+}
+article {
+	margin-bottom: 60px;
+}
 aside {
 	background-color: #f7f7f7;
 	border-top: 5px solid #1098ad;
 	border-bottom: 5px solid #1098ad;
+	/* padding-top: 50px;
+	padding-bottom: 50px; */
+	padding: 50px 0;
 }
 
 /* body {
@@ -93,9 +136,6 @@ li:first-child {
 	font-weight: bold;
 }
 /* Pseudo class selector: selects the firsat child element of li */
-li:last-child {
-	/* font-weight: bold; */
-}
 
 li:nth-child(even) {
 	/* font-weight: bold; */
@@ -121,7 +161,7 @@ a:link {
 /* a {
 	color: red;
 } */
-/* does not change the above color assigment as it only refers to a elements with no href preferably*/
+/* does not change the above color assigment as it only refers to a elements with no href preferably and psedudo class has more specificity than plain element selector */
 /* when used */
 a:visited {
 	color: #1098ad;
@@ -139,3 +179,24 @@ a:active {
 	background-color: black;
 	font-style: italic;
 }
+
+/* Resolving conflicts & specificity exercise */
+#copyright {
+	color: red;
+}
+/* Has the highest specificity and overrides all */
+.copyright {
+	color: blue;
+}
+.text {
+	color: yellow;
+}
+/* .text overrides .copyright as it comes right after it in the absence of #copyright */
+footer p {
+	color: green;
+}
+/* Has the lowest specificity */
+footer p {
+	color: green !important;
+}
+/* !important is an override mechanism that disregards specificity - its a last resort of measure and shall be disregarded whenever possible */
