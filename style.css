@@ -5,6 +5,7 @@ h4,
 p,
 li {
 	font-family: sans-serif;
+	color: #444;
 }
 /* * {} selects all as well */
 
@@ -42,11 +43,12 @@ p {
 li {
 	font-size: 20px;
 }
+/* element selector */
 
 /* footer p {
 	font-size: 16px;
 } */
-/* selects p element inside footer element */
+/* Nested element selector - selects p element inside footer element */
 
 #copyright {
 	font-size: 16px;
@@ -71,4 +73,69 @@ li {
 
 .no-bullets {
 	list-style: none;
+}
+
+.main-header {
+	background-color: #f7f7f7;
+}
+
+aside {
+	background-color: #f7f7f7;
+	border-top: 5px solid #1098ad;
+	border-bottom: 5px solid #1098ad;
+}
+
+/* body {
+	background-color: orangered;
+} */
+
+li:first-child {
+	font-weight: bold;
+}
+/* Pseudo class selector: selects the firsat child element of li */
+li:last-child {
+	/* font-weight: bold; */
+}
+
+li:nth-child(even) {
+	/* font-weight: bold; */
+}
+li:nth-child(2) {
+	/* font-weight: bold; */
+}
+
+article p:first-child {
+	/* color: red; */
+}
+/* This does not work as its not the first child - In essense, Pseudo classes work best when all child classes are of the same kind just like ordered or unordered list use case scnecarios */
+
+/* Styling Links */
+/* Keep the order of a element states as follows */
+/* initial state */
+a:link {
+	color: #1098ad;
+	text-decoration: none;
+	/* gets rid of underline of the link */
+}
+/* this overrides the below color assigment as it also carried a Pseudo assigment of link which refers to a elements with href definition */
+/* a {
+	color: red;
+} */
+/* does not change the above color assigment as it only refers to a elements with no href preferably*/
+/* when used */
+a:visited {
+	color: #1098ad;
+}
+/* when hovered over */
+a:hover {
+	color: orangered;
+	font-weight: bold;
+	/* text-decoration: underline wavy orangered;
+	text-decoration: underline dotted orangered; */
+	text-decoration: underline orangered;
+}
+/* when clicked */
+a:active {
+	background-color: black;
+	font-style: italic;
 }
