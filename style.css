@@ -101,7 +101,7 @@ li:last-child {
 }
 /* class selector - can appear in multiple locations */
 
-.no-bullets {
+.related {
 	list-style: none;
 	margin-left: 0;
 }
@@ -248,7 +248,7 @@ h2::after {
 /* We have set parent element h2 as position:relative in order to set this pseudo element content "TOP" positioned absolute in relation to */
 
 /* EXPERIMENTING WITH FLOATS */
-.author-img {
+/* .author-img {
 	float: left;
 	margin-bottom: 20px;
 }
@@ -263,18 +263,18 @@ h1 {
 }
 nav {
 	float: right;
-}
+} */
 /* .clearfix {
 	clear: both;
 	content: "";
 	display: block;
 } */
-.main-header {
+/* .main-header {
 	display: flow-root;
-}
+} */
 /* 2022 way of clearfix hack for float collapses */
 
-article {
+/* article {
 	width: 825px;
 	float: left;
 }
@@ -286,4 +286,64 @@ aside {
 
 footer {
 	clear: both;
+} */
+
+/* FLEXBOX IMPLEMENTATION */
+.main-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.author-box {
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+}
+.author {
+	margin-bottom: 0;
+	margin-left: 15px;
+}
+.related-post {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.related-link:link {
+	font-size: 17px;
+	font-weight: bold;
+	font-style: normal;
+	margin-bottom: 5px;
+	/* <a> element is an inline element. so it needs to get display:block to receive margin-bottom information */
+	display: block;
+}
+.related-author {
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.row {
+	display: flex;
+	gap: 75px;
+	/* vertical gap between article and aside elements */
+	align-items: flex-start;
+	/* disallow strecthing along cross axis for the aside element */
+	margin-bottom: 60px;
+	/* for spacing between container and footer */
+}
+aside {
+	/* 
+	flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: 300px;
+	*/
+	flex: 0 0 300px;
+}
+article {
+	flex: 1;
+	margin-bottom: 0;
+}
+article p:last-child {
+	margin-bottom: 0;
 }
