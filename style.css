@@ -357,21 +357,15 @@ footer {
 	row-gap: 60px;
 	align-items: start;
 }
-
 .main-header {
 	grid-column: 1 / -1;
 }
-
 article {
 	margin-bottom: 0;
 }
-
 article p:last-child {
 	margin-bottom: 0;
 }
-aside {
-}
-
 footer {
 	grid-column: 1 / -1;
 }
