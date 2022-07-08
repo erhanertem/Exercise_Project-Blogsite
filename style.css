@@ -323,27 +323,55 @@ footer {
 	font-style: italic;
 }
 
-.row {
-	display: flex;
-	gap: 75px;
-	/* vertical gap between article and aside elements */
-	align-items: flex-start;
-	/* disallow strecthing along cross axis for the aside element */
-	margin-bottom: 60px;
-	/* for spacing between container and footer */
-}
-aside {
-	/* 
+/* FLEXBOX LAYOUT WHICH WOULD BE REDONE WITH GRID LAYOUT */
+/* .row { */
+/* display: flex; */
+/* gap: 75px; */
+/* vertical gap between article and aside elements */
+/* align-items: flex-start; */
+/* disallow strecthing along cross axis for the aside element */
+/* margin-bottom: 60px; */
+/* for spacing between container and footer */
+/* } */
+/* aside { */
+/* 
 	flex-grow: 0;
 	flex-shrink: 0;
 	flex-basis: 300px;
 	*/
-	flex: 0 0 300px;
+/* flex: 0 0 300px; */
+/* } */
+/* article { */
+/* flex: 1; */
+/* margin-bottom: 0; */
+/* } */
+/* article p:last-child { */
+/* margin-bottom: 0; */
+/* } */
+
+/* GRID IMPLEMENTATION */
+.container {
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	column-gap: 75px;
+	row-gap: 60px;
+	align-items: start;
 }
+
+.main-header {
+	grid-column: 1 / -1;
+}
+
 article {
-	flex: 1;
 	margin-bottom: 0;
 }
+
 article p:last-child {
 	margin-bottom: 0;
+}
+aside {
+}
+
+footer {
+	grid-column: 1 / -1;
 }
