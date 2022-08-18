@@ -1,12 +1,12 @@
-# Udemy Build Responsive Real-World Websites with HTML and CSS by Jonas Schmedtmann
+### 👋 **I am Erhan ERTEM**
 
-## **Objective:** Create an imaginary blog page
+&emsp;
+
+## Udemy Build Responsive Real-World Websites with HTML and CSS by Jonas Schmedtmann
+
+### **Objective:** Create an imaginary blog page
 
 - Exercise on FLOAT and FLEXBOX in CSS (lecture 2.11 - onward)
-
----
-
-### **Erhan ERTEM**
 
 ---
 
